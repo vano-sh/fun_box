@@ -1,0 +1,11 @@
+.app {
+  padding: 40px 0;
+  height: 100vh;
+  width: 100vw;
+  background: url('~assets/png/background.png');
+
+  &__wrapper {
+    height: 100%;
+    width: 100%;
+  }
+}

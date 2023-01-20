@@ -1,0 +1,27 @@
+@font-face {
+  font-family: 'Exo2';
+  font-style: normal;
+  font-weight: 100;
+
+  src: url('~assets/fonts/Exo2-Thin.woff2') format('woff2'),
+    url('~assets/fonts/Exo2-Thin.woff') format('woff'),
+    url('~assets/fonts/Exo2-Thin.otf') format('otf');
+}
+@font-face {
+  font-family: 'Exo2';
+  font-style: normal;
+  font-weight: 400;
+
+  src: url('~assets/fonts/Exo2-Regular.woff2') format('woff2'),
+    url('~assets/fonts/Exo2-Regular.woff') format('woff'),
+    url('~assets/fonts/Exo2-Regular.otf') format('otf');
+}
+@font-face {
+  font-family: 'Exo2';
+  font-style: normal;
+  font-weight: 700;
+
+  src: url('~assets/fonts/Exo2-Bold.woff2') format('woff2'),
+    url('~assets/fonts/Exo2-Bold.woff') format('woff'),
+    url('~assets/fonts/Exo2-Bold.otf') format('otf');
+}

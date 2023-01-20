@@ -1,3 +1,3 @@
-import { ViewCards } from './layout'
+import { Header, OutputCards } from './layout'
 
-export { ViewCards }
+export { Header, OutputCards }

@@ -1,3 +1,4 @@
-import { ViewCards } from './ViewCards'
+import { Header } from './Header'
+import { OutputCards } from './OutputCards'
 
-export { ViewCards }
+export { Header, OutputCards }

@@ -54,7 +54,7 @@ module.exports = {
         },
       },
       {
-        test: /\.(eot|ttf|woff|woff2)$/i,
+        test: /\.(eot|ttf|otf|woff|woff2)$/i,
         type: 'asset/resource',
         generator: {
           filename: 'fonts/[hash][ext]',

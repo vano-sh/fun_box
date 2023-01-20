@@ -1,9 +1,12 @@
-import { ViewCards } from 'components'
+import { Header, OutputCards } from 'components'
 
 export const App = () => {
   return (
-    <>
-      <ViewCards />
-    </>
+    <div className='app'>
+      <div className='app__wrapper'>
+        <Header />
+        <OutputCards />
+      </div>
+    </div>
   )
 }
