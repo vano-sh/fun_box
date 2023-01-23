@@ -21,9 +21,7 @@ export const Card = ({ item }) => {
 
   const [isActive, setIsActive] = useState(false)
   const [isHover, setIsHover] = useState(false)
-  const [isDisabled, setIsDisabled] = useState(() =>
-    availability === '0' ? true : false
-  )
+  const [isDisabled, setIsDisabled] = useState(false)
 
   const className = 'card'
 
@@ -31,6 +29,10 @@ export const Card = ({ item }) => {
     active: isActive,
     disabled: isDisabled,
   })
+
+  useEffect(() => {
+    setIsDisabled(() => (availability === '0' ? true : false))
+  }, [])
 
   const handleCardClick = () => {
     if (isDisabled) return
