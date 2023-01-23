@@ -1,3 +1,5 @@
+import { createLine } from 'utils/helpers'
+
 export const Description = ({
   parentClassName,
   quantity,
@@ -9,7 +11,7 @@ export const Description = ({
         {`${quantity} порций`}
       </span>
       <span className={`${parentClassName}__present`}>
-        {`${present} мышей в подарок`}
+        {createLine(present)}
       </span>
     </>
   )

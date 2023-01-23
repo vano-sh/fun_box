@@ -1,38 +1,44 @@
 .card {
   position: relative;
-  border: 4px solid #1698d9;
+  height: 510px;
+  width: 320px;
+  border: 4px solid $brd-color-main;
+  overflow: hidden;
   border-radius: 10px;
-  background-color: #fff;
+  background-color: $bg-color-main;
   background-image: url('~assets/png/cat.png');
   background-repeat: no-repeat;
   background-position: bottom;
-  height: 510px;
-  width: 320px;
+  color: $fnt-color-card-main;
 
   &.active {
-    border-color: #d91667;
+    border-color: $brd-color-select;
 
     .card__weight {
-      background-color: #d91667;
+      background-color: $brd-color-select;
     }
   }
 
   &.disabled {
-    color: #b3b3b3;
-    border-color: #b3b3b3;
+    color: $fnt-color-disabled;
+    border-color: $brd-color-disabled;
 
     .card__header,
     .card__quantity,
     .card__present {
-      color: #b3b3b3;
+      color: $fnt-color-disabled;
+    }
+
+    .card__footer {
+      color: $fnt-color-footer-disabled;
     }
 
     .card__weight {
-      background-color: #b3b3b3;
+      background-color: $bg-color-weight-disabled;
     }
 
     .card__wrapper {
-      background-color: rgba(255, 255, 255, 0.5);
+      background-color: $bg-color-wrapper-disabled;
     }
   }
 
@@ -45,12 +51,15 @@
   }
 
   &__header {
+    display: flex;
+    height: 44px;
+    margin-bottom: -1px;
     margin-top: 20px;
     font-size: 16px;
-    color: #666666;
+    color: $fnt-color-description;
 
     &.hover {
-      color: #d91667;
+      color: $fnt-color-header-select;
     }
   }
 
@@ -66,11 +75,12 @@
 
   &__quantity {
     margin-top: 14px;
-    color: #666666;
+    color: $fnt-color-description;
   }
 
   &__present {
-    color: #666666;
+    color: $fnt-color-description;
+    width: 130px;
   }
 
   &__weight {
@@ -84,8 +94,8 @@
     width: 80px;
     height: 80px;
     border-radius: 50%;
-    background-color: #1698d9;
-    color: #fff;
+    background-color: $bg-color-weight;
+    color: $bg-color-main;
   }
 
   &__volume {
@@ -103,10 +113,10 @@
     width: 101%;
     font-size: 13px;
     text-align: center;
-    color: #fff;
+    color: $bg-color-main;
 
     a {
-      color: #1698d9;
+      color: $fnt-color-footer-link;
       text-decoration-style: dashed;
       text-decoration-line: revert;
     }

@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useState, useEffect } from 'react'
 import {
   Header,
   Title,
@@ -8,7 +8,7 @@ import {
 } from './components'
 import clsx from 'clsx'
 
-export const Card = ({ item }) => {
+export const Card = ({ card }) => {
   const {
     title,
     subtitle,
@@ -17,7 +17,7 @@ export const Card = ({ item }) => {
     weight,
     footerDescription,
     availability,
-  } = item
+  } = card
 
   const [isActive, setIsActive] = useState(false)
   const [isHover, setIsHover] = useState(false)

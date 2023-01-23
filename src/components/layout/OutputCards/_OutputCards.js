@@ -1,15 +1,15 @@
 import { Card } from '../../common'
-import { db } from 'db/db'
+import { db as cards } from 'db/db'
 
 export const OutputCards = () => {
   return (
-    <div className='output-cards'>
+    <section className='output-cards'>
       <div className='output-cards__wrapper'>
-        {db.length > 0 &&
-          db.map((item, index) => (
-            <Card key={index} item={item} />
+        {cards.length > 0 &&
+          cards.map((card, index) => (
+            <Card key={index} card={card} />
           ))}
       </div>
-    </div>
+    </section>
   )
 }
