@@ -1,12 +1,15 @@
-export const Description = ({ parentClassName }) => {
+export const Description = ({
+  parentClassName,
+  quantity,
+  present,
+}) => {
   return (
     <>
       <span className={`${parentClassName}__quantity`}>
-        10 порций
+        {`${quantity} порций`}
       </span>
       <span className={`${parentClassName}__present`}>
-        мышь в подарок
-        {/* {ingredient} */}
+        {`${present} мышей в подарок`}
       </span>
     </>
   )

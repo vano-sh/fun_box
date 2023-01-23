@@ -1,12 +1,11 @@
-export const Title = ({ parentClassName, ingredient }) => {
+export const Title = ({ parentClassName, title, subtitle }) => {
   return (
     <>
       <span className={`${parentClassName}__title`}>
-        Нямушка
+        {title}
       </span>
       <span className={`${parentClassName}__subtitle`}>
-        с фуа-гра
-        {/* {ingredient} */}
+        {subtitle}
       </span>
     </>
   )
