@@ -1,27 +1,32 @@
 .card {
-  position: relative;
   height: 510px;
   width: 320px;
-  border: 4px solid $brd-color-main;
-  overflow: hidden;
-  border-radius: 10px;
-  background-color: $bg-color-main;
-  background-image: url('~assets/png/cat.png');
-  background-repeat: no-repeat;
-  background-position: bottom;
   color: $fnt-color-card-main;
 
   &.active {
-    border-color: $brd-color-select;
-
     .card__weight {
       background-color: $brd-color-select;
+    }
+
+    .card__main,
+    .card__text {
+      border-color: $brd-color-select;
+    }
+
+    .card__corner {
+      background: linear-gradient(
+        -45deg,
+        $bg-color-main,
+        $bg-color-main 32px,
+        $brd-color-select 0,
+        $brd-color-select 36px,
+        transparent 0
+      );
     }
   }
 
   &.disabled {
     color: $fnt-color-disabled;
-    border-color: $brd-color-disabled;
 
     .card__header,
     .card__quantity,
@@ -37,30 +42,84 @@
       background-color: $bg-color-weight-disabled;
     }
 
-    .card__wrapper {
+    .card__corner {
+      background: linear-gradient(
+        -45deg,
+        $bg-color-main,
+        $bg-color-main 32px,
+        $brd-color-disabled 0,
+        $brd-color-disabled 36px,
+        transparent 0
+      );
+    }
+
+    .card__body {
       background-color: $bg-color-wrapper-disabled;
+    }
+
+    .card__text,
+    .card__main {
+      border-color: $brd-color-disabled;
     }
   }
 
   &__wrapper {
-    display: flex;
-    flex-direction: column;
     height: 100%;
-    width: 100%;
-    padding: 0 50px;
   }
 
   &__header {
     display: flex;
     height: 44px;
-    margin-bottom: -1px;
-    margin-top: 20px;
     font-size: 16px;
     color: $fnt-color-description;
 
     &.hover {
       color: $fnt-color-header-select;
     }
+  }
+
+  &__corner {
+    margin-bottom: -5px;
+    width: 44px;
+    background: linear-gradient(
+      -45deg,
+      $bg-color-main,
+      $bg-color-main 32px,
+      $brd-color-main 0,
+      $brd-color-main 36px,
+      transparent 0
+    );
+  }
+
+  &__text {
+    display: block;
+    flex: 1;
+    padding-top: 20px;
+    padding-left: 8px;
+    border: 4px solid $brd-color-main;
+    border-bottom: none;
+    border-left: none;
+    border-radius: 0 10px 0 0;
+    background-color: $bg-color-main;
+  }
+
+  &__main {
+    position: relative;
+    height: calc(100% - 44px);
+    background-image: url('~assets/png/cat.png');
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-color: $bg-color-main;
+    border: 4px solid $brd-color-main;
+    border-top: none;
+    border-radius: 0 0 10px 10px;
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 0 50px;
   }
 
   &__title {

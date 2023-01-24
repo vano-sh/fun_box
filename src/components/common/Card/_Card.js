@@ -53,28 +53,32 @@ export const Card = ({ card }) => {
       onMouseOut={handleCardOnMouse}>
       <div className={`${className}__wrapper`}>
         <Header parentClassName={className} isHover={isHover} />
-        <Title
-          parentClassName={className}
-          title={title}
-          subtitle={subtitle}
-        />
-        <Description
-          parentClassName={className}
-          quantity={quantity}
-          present={present}
-        />
-        <PackageWeight
-          parentClassName={className}
-          weight={weight}
-        />
+        <div className={`${className}__main`}>
+          <div className={`${className}__body`}>
+            <Title
+              parentClassName={className}
+              title={title}
+              subtitle={subtitle}
+            />
+            <Description
+              parentClassName={className}
+              quantity={quantity}
+              present={present}
+            />
+            <PackageWeight
+              parentClassName={className}
+              weight={weight}
+            />
+          </div>
+          <Footer
+            parentClassName={className}
+            footerDescription={footerDescription}
+            subtitle={subtitle}
+            isActive={isActive}
+            isDisabled={isDisabled}
+          />
+        </div>
       </div>
-      <Footer
-        parentClassName={className}
-        footerDescription={footerDescription}
-        subtitle={subtitle}
-        isActive={isActive}
-        isDisabled={isDisabled}
-      />
     </div>
   )
 }

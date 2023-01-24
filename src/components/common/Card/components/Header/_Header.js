@@ -7,10 +7,10 @@ export const Header = ({ parentClassName, isHover }) => {
   })
 
   return (
-    <header class='card__header'>
-      <div class='card__corner'></div>
-      <div class='card__rectangle'>
-        <span className={classNames}>
+    <header className={classNames}>
+      <div className={`${parentClassName}__corner`}></div>
+      <div className={`${parentClassName}__text`}>
+        <span>
           {isHover
             ? 'Котэ не одобряет?'
             : 'Сказочное заморское яство'}
